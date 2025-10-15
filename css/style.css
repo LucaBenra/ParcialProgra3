@@ -1,0 +1,67 @@
+/* le pongo un padding arriba al body para que la barra de navegacion no tape el contenido */
+body {
+    padding-top: 56px;
+}
+
+/* estilos para el spinner de carga */
+/* lo pongo fijo para que ocupe toda la pantalla */
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* le pongo un z-index alto para que este por encima de todo */
+}
+
+/* estilos para el mensajito del promedio */
+#resultadoPromedio {
+    transition: all 0.5s ease-in-out;
+    /* le pongo una transicion suave para que aparezca y desaparezca */
+    font-weight: 500;
+}
+
+/* estilos para resaltar los campos del formulario cuando son validos */
+/* esto es un extra que pedia el parcial */
+.form-control.is-valid {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
+/* transiciones para que los botones y links se vean mas suaves */
+.btn,
+.nav-link,
+.tab-pane {
+    transition: all 0.3s ease-in-out;
+}
+
+/* animacion para que las pestañas aparezcan con un fade in */
+.tab-pane {
+    animation: fadeIn 0.5s;
+}
+
+/* aqui defino la animacion fadeIn */
+@keyframes fadeIn {
+    from {
+        /* empieza invisible y un poco abajo */
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        /* termina visible y en su posicion normal */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* una mejora para que el selector de color se vea bien */
+input[type="color"] {
+    min-height: 38px;
+    padding: 0.2rem;
+}
